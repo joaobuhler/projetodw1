@@ -1,10 +1,12 @@
 import './global.css'
 import './theme.css'
+import Home from './homePaste/Home'
+
 
 function App(){
     return(
         <div>
-            <Login />
+            <Home />
         </div>
     )
 }
