@@ -1,9 +1,9 @@
-import './homePaste/corpoPaste/corpo.css'
+import './corpo.css'
 
 function Corpo(){
     return(
         <div className='corpoContainer'>
-            <p>asdfasffs</p>
+            
         </div>
     )
 }

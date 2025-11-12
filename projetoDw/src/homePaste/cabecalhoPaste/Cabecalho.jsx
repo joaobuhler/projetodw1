@@ -1,11 +1,11 @@
-import './homePaste/cabecalhoPaste/cabecalho.css'
+import './cabecalho.css'
 
 function Cabecalho(){
     return(
         <div className='cabecalhoContainer'>
-            <p>sdasfasf</p>
+            
         </div>
     )
 }
 
-export default Cabecalho()
+export default Cabecalho

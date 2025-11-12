@@ -1,0 +1,11 @@
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+.homeBaixoCabecalho{
+    display: flex;
+}

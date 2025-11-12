@@ -1,0 +1,12 @@
+.navbarContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 18vw;
+    height: 92vh;
+    background-color: var(--cor-principal);
+    padding: 2rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-principal) var(--cor-detalhes);
+}
