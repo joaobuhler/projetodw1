@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 18vw;
-    height: 92vh;
+    width: 280px;
+    height: 95vh;
     background-color: var(--cor-principal);
     padding: 2rem;
     overflow-y: auto;

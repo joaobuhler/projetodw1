@@ -5,30 +5,6 @@
     font-family: var(--fonte);
 }
 
-input{
-    all: unset;
-    height: var(--input-altura);
-    width: var(--input-largura);
-    background-color: var(--cor-fundo);
-    box-shadow: var(--cor-detalhes) 8px 8px;
-    border-radius: 8px;
-    text-indent: 16px;
-}
-
-button{
-    all: unset;
-    height: 50px;
-    width: 122px;
-    background-color: var(--cor-detalhes);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--cor-fundo);
-    cursor: pointer;
-    gap: 6px;
-}
-
 ::placeholder{
     color: var(--cor-detalhes);
 }

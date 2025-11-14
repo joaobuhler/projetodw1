@@ -10,7 +10,7 @@ function Login(){
             <div className="bodyLogin">
                 <div className='selectLoginCadastro'>
                     <label class="toogle">
-                        <input
+                        <input className="inputLoginCadastro" 
                         type="checkbox"
                         checked={isCadastro}
                         onChange={() => setIsCadastro(!isCadastro)}
@@ -23,15 +23,15 @@ function Login(){
                 <div className='loginContainer'>
                     <h1>Login</h1>
                     <div className="loginInputContainer">
-                        <input type="text" placeholder='Email'/>
-                        <input type="text" placeholder='Senha'/>
+                        <input className="inputLoginCadastro" type="text" placeholder='Email'/>
+                        <input className="inputLoginCadastro" type="text" placeholder='Senha'/>
                     </div>
                     <div className="loginButtonContainer">
-                        <button className='buttonRocket'>
+                        <button className='buttonRocket botaoLoginCadastro'>
                             <i class="material-icons">rocket_launch</i>
                             <span>Entrar</span>
                         </button>
-                        <button>
+                        <button className='botaoLoginCadastro'>
                             <span>Google</span>
                         </button>
                     </div>
@@ -42,12 +42,12 @@ function Login(){
                 <div className='cadastroContainer'>
                     <h1>Cadastro</h1>
                     <div className="loginInputContainer">
-                        <input type="text" placeholder='Nome'/>
-                        <input type="text" placeholder='Email'/>
-                        <input type="text" placeholder='Senha'/>
+                        <input className="inputLoginCadastro" type="text" placeholder='Nome'/>
+                        <input className="inputLoginCadastro" type="text" placeholder='Email'/>
+                        <input className="inputLoginCadastro" type="text" placeholder='Senha'/>
                     </div>
                     <div className="loginButtonContainer">
-                        <button className='buttonRocket'>
+                        <button className='buttonRocket botaoLoginCadastro'>
                             <i class="material-icons">rocket_launch</i>
                             <span>Cadastrar-se</span>
                         </button>
