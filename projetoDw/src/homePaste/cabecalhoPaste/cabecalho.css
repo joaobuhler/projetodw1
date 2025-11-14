@@ -4,17 +4,11 @@
     align-items: center;
     height: 60px;
     width: 100vw;
-    background-color: var(--cor-detalhes);
+    background-color: var(--cor-principal);
     padding: 16px;
 }
 
-.cabecalhoContainer i{
-    color: var(--cor-fundo);
-    font-size: 40px;
-}
-
 .cabecalhoContainer button{
-    all: unset;
     cursor: pointer;
 }
 
@@ -22,27 +16,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 200px;
     gap: 16px;
-}
-
-.botaoPerfil{
-    all: unset;
 }
 
 .direitaCabecalho{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-}
-
-.botaoLogin{
-    background-color: transparent;
-    height: 40px;
-    width: 65px;
-    margin-top: 5px;
-    color: var(--cor-fundo);
-    border: 2px solid var(--cor-fundo);
+    align-items: center; 
+    width: 150px;
 }
 
 .direitaCabecalho i{
@@ -51,6 +33,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    width: 40px;
 }
+
+.cabecalhoContainer i{
+    color: var(--cor-fundo);
+    font-size: 40px;
+}
+
+.esquerdaCabecalho button{
+    all: unset;
+    cursor: pointer;
+}
+
+
+.botaoPerfil{
+    all: unset;
+    height: 40px;
+    width: 45px;
+}
+
+.botaoLogin{
+    all: unset;
+    background-color: transparent;
+    color: var(--cor-fundo);
+    border: 2px solid var(--cor-fundo);
+    height: 40px;
+    width: 65px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+}
+
+

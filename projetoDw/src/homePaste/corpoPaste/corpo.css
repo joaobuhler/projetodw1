@@ -1,6 +1,6 @@
 .corpoContainer{
     height: 95vh;
-    width: 84vw;
+    width: 100vw;
     padding: 4rem;
     background-color: var(--cor-fundo);
 }

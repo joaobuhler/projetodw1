@@ -1,12 +1,27 @@
-.navbarContainer{
+
+:root {
+    --altura-cabecalho: 60px;
+}
+
+.navbarContainer {
+    position: fixed;
+    top: var(--altura-cabecalho);
+    left: -280px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+
     display: flex;
     flex-direction: column;
     align-items: start;
     width: 280px;
-    height: 95vh;
-    background-color: var(--cor-principal);
+    height: calc(100vh - var(--altura-cabecalho));
+    background-color: var(--cor-detalhes);
     padding: 2rem;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--cor-principal) var(--cor-detalhes);
+}
+
+.navbarAberta {
+    left: 0;
 }
