@@ -11,7 +11,7 @@ function Corpo() {
             root.style.setProperty("--cor-principal", "#024950");
             root.style.setProperty("--cor-fundo", "#161616");
             root.style.setProperty("--cor-detalhes", "#1c5966");
-            root.style.setProperty("--cor-escura", "#ffffff");
+            root.style.setProperty("--cor-escura", "#172a3a");
             root.style.setProperty("--cor-navbar", "rgb(17, 17, 17)");
         } else {
             root.style.setProperty("--cor-principal", "#82c0cc");

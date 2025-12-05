@@ -1,10 +1,32 @@
+#setaVoltar{
+    cursor: pointer;
+    position: absolute;
+    left: 7.5%;
+    top: 13%;
+    font-size: 5rem;
+    color: var(--cor-texto);
+}
+
+#btnCriarQuiz{
+    width: 7rem;
+    height: 7rem;
+    background-color: var(--cor-escura);
+    border-radius: 3.5rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 .ContainerCriarQuiz{
     display: flex;
     flex-direction: column;
+    justify-content: start;
     align-items: center;
     margin-top: 50px;
     background-color: var(--cor-principal);
-    height: 100vh;
+    height: 5000px;
     width: 90vw;
     justify-self: center;
     border-top-left-radius: 40px;
@@ -12,6 +34,13 @@
     padding: 3rem;
 }
 
+.cimaoCriarQuiz{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 
 .ContainerCriarQuiz h1{
     color: var(--cor-texto);
@@ -19,13 +48,19 @@
     margin-bottom: 2rem;
 }
 
+.ContainerCriarQuiz i{
+    font-size: 4rem;
+    color: var(--cor-texto);
+}
+
 .cimaQuiz{
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 1000px;
+    height: 500px;
     width: 1200px;
     justify-content: center;
+    margin-bottom: 3rem;
 }
 
 .CategoriasCriarQuiz{
@@ -70,7 +105,7 @@
     border-radius: 25px;
     box-shadow: var(--cor-escura) 8px 8px;
     padding: 10px;
-    padding-top: 15 px;
+    padding-top: 15px;
     justify-content: space-between;
 }
 
@@ -98,7 +133,6 @@
     color: var(--cor-texto);
     font-size: 2.0rem;
     margin-bottom: 2rem;
-    
 }
 
 .divCriarQuiz{
@@ -122,19 +156,20 @@
 .textCriarQuiz{
     color: var(--cor-escura);
     font-size: 1.3rem;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-texto);
     height: 2rem;
     width: 16rem;
     border-radius: 20px;
     text-indent: 1rem;
+    border: none;
 }
 
-.ContainerCriarQuiz input[type="checkbox"] {
+.cimaQuiz input[type="checkbox"] {
     all: unset;
     width: 20px;
     height: 20px;
     cursor: pointer;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-texto);
     border-radius: 3px;
     border: 2px solid var(--cor-texto);
     transition: background-color 0.3s, border-color 0.3s;
@@ -142,7 +177,6 @@
 
 .ContainerCriarQuiz input[type="checkbox"]:checked {
     background-color: var(--cor-escura); /* Cor de fundo quando selecionado */
-    border-color: var(--cor-escura); /* Cor da borda quando selecionado */
 }
 
 .ContainerCriarQuiz input[type="checkbox"]:hover {
@@ -154,22 +188,10 @@
     font-size: 2rem;
 }
 
-.numCriarQuiz{
-    color: var(--cor-escura);
-    font-size: 1.3rem;
-    background-color: var(--cor-fundo);
-    height: 2rem;
-    width: 5rem;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .secCriarQuiz{
     color: var(--cor-escura);
     font-size: 1.3rem;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-texto);
     height: 2rem;
     width: 14rem;
     border-radius: 20px;
@@ -179,7 +201,7 @@
 .difCriarQuiz{
     color: var(--cor-escura);
     font-size: 1.3rem;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-texto);
     height: 2rem;
     width: 10rem;
     border-radius: 20px;
@@ -188,8 +210,90 @@
     align-items: center;
     padding: 1.3rem;
     cursor: pointer;
+    transition: background-color 0.18s ease, color 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
 }
 
 .difCriarQuiz:hover {
     scale: 1.05;
+}
+
+.difCriarQuiz-selected {
+  background-color: var(--cor-escura);
+  color: var(--cor-texto);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+}
+
+.containerPerguntasCriarQuiz{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.perguntaCriarQuiz{
+    display: flex;
+    flex-flow: column wrap;
+    width: 92%;
+    height: 500px;
+    background-color: var(--cor-detalhes);
+    border-radius: 25px;
+    box-shadow: var(--cor-escura) 8px 8px;
+    padding: 10px;
+    padding-top: 2rem;
+    align-items: center;
+    justify-content: start;
+}
+
+.nomePerguntaCriarQuiz{
+    all: unset;
+    color: var(--cor-escura);
+    font-size: 1.5rem;
+    background-color: var(--cor-texto);
+    height: 3rem;
+    width: 90%;
+    border-radius: 20px;
+    text-indent: 2rem;
+    border: none;
+}
+
+.respostasCriarQuiz{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 4rem;
+    gap: 1rem;
+}
+
+.respostaCriarQuiz{
+    all: unset;
+    width: 28rem;
+    height: 3rem;
+    background-color: var(--cor-texto);
+    border-radius: 1rem;
+    text-indent: 1rem;
+}
+
+.checkboxCriarQuiz{
+    all: unset;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    background-color: var(--cor-texto);
+    border-radius: 1rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.letraCriarQuiz{
+    background-color: transparent;
+    border: var(--cor-escura) 4px solid;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 2rem;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-texto);
 }
