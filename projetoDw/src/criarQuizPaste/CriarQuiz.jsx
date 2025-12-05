@@ -33,23 +33,43 @@ function CriarQuiz() {
               <h1>N de Questões</h1>
               <div className="CheckBoxCriarQuiz">
                     <div className="divCriarQuiz">
-                        <div className="TextQuestoes">10</div>
+                        <div className="numCriarQuiz">10</div>
                         <input type="checkbox" />
                     </div>
                     <div className="divCriarQuiz">
-                        <div className="TextQuestoes">15</div>
+                        <div className="numCriarQuiz">15</div>
                         <input type="checkbox" />
                     </div>
                     <div className="divCriarQuiz">
-                        <div className="TextQuestoes">20</div>
+                        <div className="numCriarQuiz">20</div>
                         <input type="checkbox" />
                     </div>
               </div>
             </div>
-            <div className="categoriasPerguntasDireitaCriarQuiz"></div>
+            <div className="categoriasPerguntasDireitaCriarQuiz">
+              <h1>Tempo/Questão</h1>
+              <div className="CheckBoxCriarQuiz">
+                    <div className="divCriarQuiz">
+                        <div className="secCriarQuiz">15 segundos</div>
+                        <input type="checkbox" />
+                    </div>
+                    <div className="divCriarQuiz">
+                        <div className="secCriarQuiz">30 segundos</div>
+                        <input type="checkbox" />
+                    </div>
+                    <div className="divCriarQuiz">
+                        <div className="secCriarQuiz">1 minuto</div>
+                        <input type="checkbox" />
+                    </div>
+              </div>
+            </div>
           </div>
           <div className="categoriasBaixoCriarQuiz">
-            <div className="categoriasPerguntasBaixoCriarQuiz"></div>
+            <div className="categoriasPerguntasBaixoCriarQuiz">
+              <div className="difCriarQuiz">Fácil</div>
+              <div className="difCriarQuiz">Médio</div>
+              <div className="difCriarQuiz">Difícil</div>
+            </div>
           </div>
         </div>
       </div>
