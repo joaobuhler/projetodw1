@@ -3,11 +3,13 @@ import "./theme.css";
 import Home from "./homePaste/Home";
 import Login from "./loginCadastroPaste/LoginCadastro";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CriarQuiz from "./criarQuizPaste/CriarQuiz";
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/CriarQuiz" element={<CriarQuiz />} />
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
       </Routes>
