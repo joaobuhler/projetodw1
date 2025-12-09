@@ -1,0 +1,78 @@
+.rf-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.rf-container h1 {
+  font-size: 42px;
+  color: #3a6f7a;
+  margin-bottom: 10px;
+}
+
+.rf-title {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #4a8892;
+}
+
+.rf-podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 40px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+.rf-first, .rf-second, .rf-third {
+  background: #62a8ac;
+  width: 130px;
+  border-radius: 12px;
+  color: white;
+  padding-top: 10px;
+  box-shadow: 0 6px 12px #00000025;
+}
+
+.rf-first {
+  height: 170px;
+  background: #48b4c7;
+}
+
+.rf-second {
+  height: 130px;
+  background: #5bb6c5;
+}
+
+.rf-third {
+  height: 120px;
+  background: #4fa1b0;
+}
+
+.rf-podium h3 {
+  font-size: 40px;
+}
+
+.rf-podium p {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.rf-lista {
+  margin-top: 25px;
+  padding: 0;
+}
+
+.rf-lista li {
+  background: #0091a5;
+  color: white;
+  margin: 8px auto;
+  width: 300px;
+  padding: 12px;
+  list-style: none;
+  border-radius: 12px;
+  font-size: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  box-shadow: 0 4px 8px #00000030;
+}
