@@ -16,8 +16,6 @@ function App() {
         <Route path="/EntrarSala" element={<EntrarSala />} />
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
-
-        {/* TELAS NOVAS */}
         <Route path="/topglobal" element={<TopGlobal />} />
         <Route path="/rankingfinal" element={<RankingFinal />} />
       </Routes>
