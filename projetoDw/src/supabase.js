@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
-const KEY = import.meta.env.VITE_SUPABASE_ANON_KEY; // ← chave certa
+const KEY = import.meta.env.VITE_SUPABASE_KEY; // ← chave certa
 
 if (!URL) throw new Error("VITE_SUPABASE_URL is missing");
 if (!KEY) throw new Error("VITE_SUPABASE_ANON_KEY is missing");
