@@ -1,0 +1,54 @@
+.tg-container {
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+}
+
+.tg-container h1 {
+  font-size: 40px;
+  color: #3a6f7a;
+  margin-bottom: 30px;
+}
+
+.tg-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tg-col {
+  background: #b6e0e5;
+  width: 260px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px #00000020;
+  transition: 0.3s;
+}
+
+.tg-col:hover {
+  transform: scale(1.03);
+}
+
+.tg-col h2 {
+  background: #79c5d0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.tg-col ul {
+  padding: 0;
+  margin-top: 15px;
+}
+
+.tg-col li {
+  list-style: none;
+  background: #5bb6c5;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 3px 5px #00000025;
+}
