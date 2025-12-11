@@ -33,15 +33,85 @@
     margin: 1rem;
     background-color: var(--cor-detalhes);
     box-shadow: var(--cor-escura) 8px 8px;
+    color: var(--cor-texto);
     border-radius: 1rem;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.sobreQuiz{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    font-size: 1.1rem;
 }
 
 .blocoQuiz:hover{
     scale: 1.05;
     transition: all 0.1s ease-in-out;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background: var(--cor-detalhes);
+    padding: 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    animation: aparecer 0.2s ease;
+    color: var(--cor-texto);
+}
+
+@keyframes aparecer {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.btnJogar {
+    width: 100%;
+    background: var(--cor-escura);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    height: 2rem;
+    margin-top: 1rem ;
+}
+
+.btnFechar {
+    background-color: var(--cor-texto);
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    height: 2rem;
+    border: none;
+}
+
+.btnJogar:hover{
+    background-color: rgba(0, 0, 0, 0.623);
+}
+
+.btnFechar:hover{
+    background-color: rgba(255, 255, 255, 0.623);
 }

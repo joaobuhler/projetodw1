@@ -162,6 +162,13 @@
     border-radius: 20px;
     text-indent: 1rem;
     border: none;
+    margin-bottom: 1rem;
+}
+
+.inputPoderesCriarQuiz{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .cimaQuiz input[type="checkbox"] {
@@ -322,14 +329,16 @@
     color: var(--cor-texto);
     border-radius: 0.5rem;
     cursor: pointer;
-    border: 2px solid transparent;
+    border: none;
     transition: background-color 0.2s ease, border-color 0.2s ease;
     font-size: 1rem;
     font-weight: 500;
+    box-shadow: var(--cor-escura) 4px 4px;
 }
 
 .abaQuiz:hover {
     background-color: var(--cor-escura);
+    box-shadow: var(--cor-detalhes) 4px 4px;
 }
 
 .abaQuiz-active {

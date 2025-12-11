@@ -231,7 +231,7 @@ function CriarQuiz() {
 
               <h1>Permitir Poderes</h1>
 
-              <div className="CheckBoxCriarQuiz">
+              <div className="CheckBoxCriarQuiz inputPoderesCriarQuiz">
                 {poderes.map((op) => (
                   <div key={op} className="divCriarQuiz">
                     <div className="secCriarQuiz">{op}</div>
