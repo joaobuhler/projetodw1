@@ -6,8 +6,8 @@
     align-items: end;
 }
 .containerTerminar{
+    padding: 2rem;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: var(--cor-principal);
@@ -16,4 +16,68 @@
     max-width: 90rem;
     border-start-end-radius: 4rem;
     border-start-start-radius: 4rem;
+}
+
+.trilhoCards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 17rem;
+    width: 100%;
+}
+
+.cardResultado{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 11rem;
+    width: 22.5rem;
+    background-color: var(--cor-detalhes);
+    border-radius: 1rem;
+    box-shadow: var(--cor-escura) 8px 8px;
+}
+
+.cardGrafico{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 13rem;
+    width: 30rem;
+    background-color: var(--cor-detalhes);
+    border-radius: 1rem;
+    box-shadow: var(--cor-escura) 8px 8px;
+}
+
+.pCard{
+    font-size: 1.4rem;
+    color: var(--cor-escura);
+    font-weight: bold;
+}
+
+.containerTerminar h1{
+    font-size: 3rem;
+    color: var(--cor-texto);
+}
+
+.containerTerminar p{
+    font-size: 1.5rem;
+    color: var(--cor-texto);
+}
+
+.containerTerminar h2{
+    font-size: 5rem;
+    color: var(--cor-texto);
+}
+
+.containerTerminar i{
+    color: var(--cor-texto);
+    position: absolute;
+    font-size: 5rem;
+    display: flex;
+    align-self: start;
+    cursor: pointer;
 }

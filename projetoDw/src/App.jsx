@@ -19,7 +19,10 @@ function App() {
         <Route path="/EntrarSala" element={<EntrarSala />} />
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/JogarQuiz" element={<JogarQuiz />} />
+        
+        {/* ROTA CORRETA */}
+        <Route path="/jogarQuiz/:id" element={<JogarQuiz />} />
+        
         <Route path="/topglobal" element={<TopGlobal />} />
         <Route path="/rankingfinal" element={<RankingFinal />} />
         <Route path="/terminarQuiz" element={<TerminarQuiz />} />
@@ -27,5 +30,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

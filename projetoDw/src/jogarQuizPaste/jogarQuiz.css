@@ -162,3 +162,21 @@
     color: var(--cor-texto);
     z-index: 0;
 }
+
+/* Alternativas eliminadas pelo poder */
+.alternativaEliminada {
+    background-color: #444 !important;
+    opacity: 0.5;
+    cursor: not-allowed;
+    position: relative;
+    pointer-events: none;
+}
+
+.alternativaEliminada .textAlternativa {
+    text-decoration: line-through;
+    color: #bbb !important;
+}
+
+.alternativaEliminada .numAlternativa {
+    background-color: #222 !important;
+}
