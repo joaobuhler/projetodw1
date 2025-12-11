@@ -7,6 +7,7 @@ import CriarQuiz from "./criarQuizPaste/CriarQuiz";
 import EntrarSala from "./entrarSalaPaste/EntrarSala";
 import TopGlobal from "./rankingPaste/TopGlobal";
 import JogarQuiz from "./jogarQuizPaste/JogarQuiz";
+import TerminarQuiz from "./jogarQuizPaste/TerminarQuiz";
 import RankingFinal from "./rankingPaste/RankingFinal";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/JogarQuiz" element={<JogarQuiz />} />
         <Route path="/topglobal" element={<TopGlobal />} />
         <Route path="/rankingfinal" element={<RankingFinal />} />
+        <Route path="/terminarQuiz" element={<TerminarQuiz />} />
       </Routes>
     </Router>
   );
