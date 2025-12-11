@@ -163,7 +163,8 @@ function CriarQuiz() {
 
         // 4. SUCESSO
         alert("Quiz criado com sucesso!");
-        navigate("/quiz/" + quizId);
+        navigate("/home");
+
 
     } catch (error) {
         console.error("Erro ao criar quiz:", error);
@@ -296,6 +297,9 @@ function CriarQuiz() {
       {/* PERGUNTAS */}
       <div className="containerPerguntasCriarQuiz">
         <h1>Desenvolver Perguntas</h1>
+        <button id="btnAddPergunta" onClick={handleAddQuestion} disabled={questions.length >= 24}>
+              +
+        </button>
 
         {/* abas */}
         {questions.length > 0 && (
@@ -322,6 +326,7 @@ function CriarQuiz() {
                 </div>
               </div>
             ))}
+
           </div>
         )}
 
@@ -403,10 +408,6 @@ function CriarQuiz() {
 
       <button id="btnCriarQuiz" onClick={handleCreateQuiz} disabled={isLoading}>
         {isLoading ? "Criando..." : "Criar Quiz"}
-      </button>
-
-      <button id="btnAddPergunta" onClick={handleAddQuestion} disabled={questions.length >= 24}>
-        +
       </button>
     </div>
   );

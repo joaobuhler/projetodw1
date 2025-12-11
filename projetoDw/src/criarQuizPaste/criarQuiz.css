@@ -10,7 +10,9 @@
 #btnCriarQuiz{
     width: 7rem;
     height: 7rem;
-    background-color: var(--cor-escura);
+    background-color: var(--cor-detalhes);
+    color: var(--cor-texto);
+    font-size: 1.6rem;
     border-radius: 3.5rem;
     margin-top: 3rem;
     display: flex;
@@ -334,11 +336,11 @@
     font-size: 1rem;
     font-weight: 500;
     box-shadow: var(--cor-escura) 4px 4px;
+    transition: transform 0.1s ease;
 }
 
 .abaQuiz:hover {
-    background-color: var(--cor-escura);
-    box-shadow: var(--cor-detalhes) 4px 4px;
+    scale: 1.025;
 }
 
 .abaQuiz-active {
@@ -375,4 +377,17 @@
 
 .mensagemSemPerguntas p {
     margin: 0;
+}
+#btnAddPergunta{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--cor-escura);
+    color: var(--cor-texto);
+    font-size: 2rem;
+    border-radius: 1.5rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
