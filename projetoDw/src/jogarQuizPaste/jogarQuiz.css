@@ -1,6 +1,6 @@
 /* ============================
    LAYOUT PRINCIPAL
-============================ */
+   ============================ */
 .bodyJogarQuiz {
     display: flex;
     flex-direction: row;
@@ -15,7 +15,7 @@
 
 /* ============================
    ÁREA PRINCIPAL DO QUIZ
-============================ */
+   ============================ */
 .containerJogarQuiz {
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@
 
 /* ============================
    PERGUNTA + ALTERNATIVAS
-============================ */
+   ============================ */
 .containerAlternativasJogar {
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@
 
 /* ============================
    ALTERNATIVAS
-============================ */
+   ============================ */
 .alternativaJogar {
     display: flex;
     justify-content: start;
@@ -134,7 +134,7 @@
 
 /* ============================
    ALTERNATIVA ELIMINADA
-============================ */
+   ============================ */
 .alternativaEliminada {
     background-color: #444 !important;
     opacity: 0.45;
@@ -155,7 +155,7 @@
 
 /* ============================
    PODERES
-============================ */
+   ============================ */
 .containerPoderes {
     display: flex;
     flex-direction: column;
@@ -195,6 +195,7 @@
     border-radius: 5rem;
 
     transition: scale 150ms ease, background-color .25s;
+    cursor: pointer;
 }
 
 .poderesJogar:hover {
@@ -247,11 +248,9 @@
     transition: background-color .25s, color .25s;
 }
 
-
-
 /* ============================
    CORES FIXAS DOS PODERES
-============================ */
+   ============================ */
 
 /* ❄ Congelar → azul */
 .containerContainerPoderes .poderesJogar:nth-child(1) .iconPoder {
@@ -268,13 +267,13 @@
     color: #E53935 !important;
 }
 
-
 /* Poder bloqueado (quando quantidade = 0) */
 .poder-bloqueado {
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 0.45;
     filter: grayscale(100%);
-    scale: 0.95;
+    transform: scale(0.95);
+    cursor: default;
 }
 
 /* Ícones coloridos fixos */
@@ -288,4 +287,128 @@
 
 .iconPoder.iconeGelo {
     color: #6bbcff !important;
+}
+
+/* ======== INPUTS DO MODO CLARO ======== */
+input,
+textarea {
+  color: #0b2f33 !important;
+}
+
+/* ======== INPUTS NO MODO ESCURO ======== */
+.dark-mode input,
+.dark-mode textarea {
+  color: white !important;
+  caret-color: white !important;
+}
+
+/* Ajuste para placeholder também */
+input::placeholder,
+textarea::placeholder {
+  color: #5e8b95 !important;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: #b8dfe8 !important;
+}
+
+/* ===== PATCH: mostrar alternativa errada quando vida for usada ===== */
+.alternativaErradaMarcada {
+  background-color: rgba(255, 0, 0, 0.25);
+  border: 2px solid red;
+}
+
+/* ============================
+   FEEDBACK: ACERTO / ERRO
+   ============================ */
+
+.alternativaCorreta {
+  background-color: #4CAF50 !important;
+  box-shadow: 0 0 20px #4caf50aa !important;
+  border: 3px solid #2e7d32;
+  transform: scale(1.03);
+  transition: all 200ms ease;
+}
+
+.alternativaErrada {
+  background-color: #e53935 !important;
+  box-shadow: 0 0 20px #e53935aa !important;
+  border: 3px solid #b71c1c;
+  transform: scale(0.97);
+  transition: all 200ms ease;
+}
+
+.alternativaCorreta .numAlternativa,
+.alternativaCorreta .textAlternativa {
+  color: white !important;
+}
+
+.alternativaErrada .numAlternativa,
+.alternativaErrada .textAlternativa {
+  color: white !important;
+}
+
+.alternativaDesativada {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* ============================
+   VIDA EXTRA - VISUAL
+   ============================ */
+
+.vidaAtivaGlow {
+  animation: vidaPulse 1.3s infinite ease-in-out;
+  filter: drop-shadow(0 0 12px #ff3b6b);
+}
+
+@keyframes vidaPulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px #ff3b6bcc);
+  }
+  50% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 18px #ff1744);
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px #ff3b6bcc);
+  }
+}
+
+/* Texto flutuante "VIDA ATIVA" */
+.avisoVidaAtiva {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 28px;
+  background: #ff1744;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 12px;
+  animation: avisoVidaFade 2s ease forwards;
+  z-index: 999;
+  box-shadow: 0 0 12px #ff1744dd;
+}
+
+@keyframes avisoVidaFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
 }

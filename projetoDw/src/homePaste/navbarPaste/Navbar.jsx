@@ -12,12 +12,6 @@ function Navbar({ aberta }) {
                       Criar Quiz
                   </h2>
               </div>
-              <div className='lista'>
-                  <h2 className='subtitulo' onClick={() => navigate("/TopGlobal")}>
-                      <i className="material-icons">public</i>
-                      Ranking Global
-                  </h2>
-              </div>
             </div>
     </div>
   );
