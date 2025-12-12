@@ -1,20 +1,22 @@
 .rf-container {
   text-align: center;
   padding: 30px;
+  color: var(--cor-texto);
 }
 
 .rf-container h1 {
   font-size: 42px;
-  color: #3a6f7a;
+  color: var(--cor-texto);
   margin-bottom: 10px;
 }
 
 .rf-title {
   font-size: 32px;
   margin-bottom: 25px;
-  color: #4a8892;
+  color: var(--cor-texto);
 }
 
+/* ===== PODIUM ===== */
 .rf-podium {
   display: flex;
   justify-content: center;
@@ -24,28 +26,31 @@
   margin-bottom: 30px;
 }
 
-.rf-first, .rf-second, .rf-third {
-  background: #62a8ac;
+.rf-first,
+.rf-second,
+.rf-third {
   width: 130px;
   border-radius: 12px;
-  color: white;
   padding-top: 10px;
-  box-shadow: 0 6px 12px #00000025;
+  color: var(--cor-texto-claro);
+  background: var(--cor-destaque);
+  box-shadow: 0 6px 12px var(--cor-sombra);
+  transition: background-color .25s, color .25s;
 }
 
 .rf-first {
   height: 170px;
-  background: #48b4c7;
+  background: var(--cor-principal);
 }
 
 .rf-second {
   height: 130px;
-  background: #5bb6c5;
+  background: var(--cor-principal-secundaria);
 }
 
 .rf-third {
   height: 120px;
-  background: #4fa1b0;
+  background: var(--cor-principal-terciaria);
 }
 
 .rf-podium h3 {
@@ -57,14 +62,15 @@
   margin-top: 5px;
 }
 
+/* ===== LISTA ===== */
 .rf-lista {
   margin-top: 25px;
   padding: 0;
 }
 
 .rf-lista li {
-  background: #0091a5;
-  color: white;
+  background: var(--cor-principal);
+  color: var(--cor-texto-claro);
   margin: 8px auto;
   width: 300px;
   padding: 12px;
@@ -74,5 +80,6 @@
   display: flex;
   gap: 12px;
   justify-content: center;
-  box-shadow: 0 4px 8px #00000030;
+  box-shadow: 0 4px 8px var(--cor-sombra);
+  transition: background-color .25s, color .25s;
 }

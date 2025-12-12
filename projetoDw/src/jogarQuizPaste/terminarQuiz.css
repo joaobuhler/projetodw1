@@ -1,24 +1,36 @@
-.bodyTerminar{
+.bodyTerminar {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: end;
+    background-color: var(--cor-fundo);
+    transition: background-color .25s, color .25s;
 }
-.containerTerminar{
+
+.containerTerminar {
     padding: 2rem;
     display: flex;
     align-items: center;
     flex-direction: column;
+
     background-color: var(--cor-principal);
+    color: var(--cor-texto);
+
     height: 90vh;
     width: 90vw;
     max-width: 90rem;
+
     border-start-end-radius: 4rem;
     border-start-start-radius: 4rem;
+
+    box-shadow: 0 -8px 20px rgba(0,0,0,0.15);
+    transition: background-color .25s, color .25s, box-shadow .25s;
+
+    position: relative;
 }
 
-.trilhoCards{
+.trilhoCards {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -26,58 +38,69 @@
     width: 100%;
 }
 
-.cardResultado{
+/* ====== CARDS ====== */
+.cardResultado,
+.cardGrafico {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
     padding: 1rem;
+    border-radius: 1rem;
+
+    background-color: var(--cor-detalhes);
+    box-shadow: 6px 6px 0 var(--cor-escura);
+
+    transition: background-color .25s, box-shadow .25s;
+}
+
+.cardResultado {
     height: 11rem;
     width: 22.5rem;
-    background-color: var(--cor-detalhes);
-    border-radius: 1rem;
-    box-shadow: var(--cor-escura) 8px 8px;
 }
 
-.cardGrafico{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+.cardGrafico {
     height: 13rem;
     width: 30rem;
-    background-color: var(--cor-detalhes);
-    border-radius: 1rem;
-    box-shadow: var(--cor-escura) 8px 8px;
 }
 
-.pCard{
+/* Texto dentro dos cards */
+.pCard {
     font-size: 1.4rem;
-    color: var(--cor-escura);
     font-weight: bold;
+    color: var(--cor-texto);
 }
 
-.containerTerminar h1{
+/* Títulos e textos */
+.containerTerminar h1 {
     font-size: 3rem;
     color: var(--cor-texto);
 }
 
-.containerTerminar p{
+.containerTerminar p {
     font-size: 1.5rem;
     color: var(--cor-texto);
 }
 
-.containerTerminar h2{
+.containerTerminar h2 {
     font-size: 5rem;
     color: var(--cor-texto);
 }
 
-.containerTerminar i{
+/* Ícone (voltar) */
+.containerTerminar i {
     color: var(--cor-texto);
+    font-size: 4rem;
+
     position: absolute;
-    font-size: 5rem;
-    display: flex;
-    align-self: start;
+    top: 1rem;
+    left: 1.2rem;
+
     cursor: pointer;
+    transition: color .25s, transform .2s ease;
+}
+
+.containerTerminar i:hover {
+    transform: scale(1.1);
 }

@@ -1,175 +1,147 @@
+/* ============================
+   LAYOUT PRINCIPAL
+============================ */
+.bodyJogarQuiz {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: var(--cor-fundo);
+    transition: background-color .25s ease, color .25s ease;
+}
+
+/* ============================
+   ÁREA PRINCIPAL DO QUIZ
+============================ */
 .containerJogarQuiz {
     display: flex;
     flex-direction: column;
+
     height: 100vh;
     width: 70vw;
+
     background-color: var(--cor-principal);
+    color: var(--cor-texto);
+
     border-end-end-radius: 5rem;
     border-start-end-radius: 5rem;
+
     padding: 2rem;
     gap: 4rem;
-    box-shadow: var(--cor-detalhes) 1rem 1rem;
+
+    box-shadow: 1rem 1rem 0 var(--cor-detalhes);
+    transition: background-color .25s, color .25s, box-shadow .25s;
 }
 
 .containerJogarQuiz h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: var(--cor-texto);
+
     width: 45rem;
-    margin-top: 2rem;
+    margin: 2rem auto;
+
+    font-size: 2rem;
+    color: var(--cor-texto);
+
+    transition: color .25s ease;
 }
 
+/* ============================
+   PERGUNTA + ALTERNATIVAS
+============================ */
 .containerAlternativasJogar {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+
     height: 40rem;
-    width: 100%;
+    gap: 2rem;
     margin-top: 1rem;
+    width: 100%;
 }
 
 .perguntaJogarQuiz {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-left: 2rem;
+
     height: 6rem;
     width: 90%;
+    padding-left: 2rem;
+
     border-radius: 2rem;
-    gap: 2rem;
+    color: var(--cor-texto);
 }
 
-.alternativaJogar{
+/* ============================
+   ALTERNATIVAS
+============================ */
+.alternativaJogar {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-left: 2rem;
+
     height: 6rem;
     width: 90%;
+    padding-left: 2rem;
+
     background-color: var(--cor-detalhes);
     border-radius: 2rem;
+
+    box-shadow: 8px 8px 0 var(--cor-escura);
+
     cursor: pointer;
-    transition: transform 150ms ease;
-    transform: translateX(0);
-    box-shadow: var(--cor-escura) 8px 8px;
+    transition: transform 150ms ease, background-color .25s ease, box-shadow .25s ease;
 }
 
-.alternativaJogar:hover{
+.alternativaJogar:hover {
     transform: translateX(0.6rem);
 }
 
-.numAlternativa{
+/* Número da Alternativa */
+.numAlternativa {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    height: 5rem;
+    width: 5rem;
+
+    border-radius: 2.5rem;
+
     font-size: 3rem;
     color: var(--cor-texto);
     background-color: var(--cor-escura);
-    height: 5rem;
-    width: 5rem;
-    border-radius: 2.5rem;
+
+    transition: background-color .25s ease;
 }
 
-.textAlternativa{
+/* Texto da Alternativa */
+.textAlternativa {
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-size: 1.5rem;
     color: var(--cor-texto);
+
     text-indent: 2rem;
+    transition: color .25s ease;
 }
 
-.containerPoderes{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
-    margin-right: 2rem;
-    height: 90%;
-    width: 25vw;
-}
-
-.bodyJogarQuiz {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--cor-fundo);
-}
-
-.poderesJogar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    height: 10rem;
-    width: 10rem;
-    background-color: var(--cor-detalhes);
-    border-radius: 5rem;
-    transition: scale 150ms ease;
-}
-
-.poderesJogar:hover{
-    scale: 1.1;
-}
-
-.containerContainerPoderes{
-    width: 100%;
-    height: 85%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.quantidadePoderes {
-    background-color: var(--cor-escura);
-    height: 4rem;
-    width: 4rem;
-    border-radius: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: end;
-    margin-left: auto;
-    color: var(--cor-texto);
-    font-size: 2rem;
-    z-index: 1;
-}
-
-#timerJogar{
-    font-size: 4rem;
-    color: var(--cor-texto);
-    background-color: var(--cor-escura);
-    height: 5.5rem;
-    width: 15rem;
-    border-radius: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.iconPoder {
-    position: absolute;
-    font-size: 6rem;
-    color: var(--cor-texto);
-    z-index: 0;
-}
-
-/* Alternativas eliminadas pelo poder */
+/* ============================
+   ALTERNATIVA ELIMINADA
+============================ */
 .alternativaEliminada {
     background-color: #444 !important;
-    opacity: 0.5;
+    opacity: 0.45;
     cursor: not-allowed;
-    position: relative;
     pointer-events: none;
+
+    box-shadow: none !important;
 }
 
 .alternativaEliminada .textAlternativa {
@@ -179,4 +151,141 @@
 
 .alternativaEliminada .numAlternativa {
     background-color: #222 !important;
+}
+
+/* ============================
+   PODERES
+============================ */
+.containerPoderes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 2rem;
+    margin-right: 2rem;
+
+    height: 90%;
+    width: 25vw;
+}
+
+.containerContainerPoderes {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    align-items: center;
+
+    height: 85%;
+    width: 100%;
+    gap: 2rem;
+}
+
+.poderesJogar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    height: 10rem;
+    width: 10rem;
+
+    background-color: var(--cor-detalhes);
+    border-radius: 5rem;
+
+    transition: scale 150ms ease, background-color .25s;
+}
+
+.poderesJogar:hover {
+    scale: 1.1;
+}
+
+.iconPoder {
+    position: absolute;
+    font-size: 6rem;
+    color: var(--cor-texto);
+
+    transition: color .25s ease;
+}
+
+/* Quantidade de poderes */
+.quantidadePoderes {
+    background-color: var(--cor-escura);
+
+    height: 4rem;
+    width: 4rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    align-self: end;
+    margin-left: auto;
+
+    font-size: 2rem;
+    color: var(--cor-texto);
+}
+
+/* TIMER */
+#timerJogar {
+    font-size: 4rem;
+    color: var(--cor-texto);
+
+    background-color: var(--cor-escura);
+
+    height: 5.5rem;
+    width: 15rem;
+
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color .25s, color .25s;
+}
+
+
+
+/* ============================
+   CORES FIXAS DOS PODERES
+============================ */
+
+/* ❄ Congelar → azul */
+.containerContainerPoderes .poderesJogar:nth-child(1) .iconPoder {
+    color: #4FC3F7 !important;
+}
+
+/* ⛔ Bloquear/Eliminar → vermelho */
+.containerContainerPoderes .poderesJogar:nth-child(2) .iconPoder {
+    color: #FF5252 !important;
+}
+
+/* ❤️ Vida → vermelho forte */
+.containerContainerPoderes .poderesJogar:nth-child(3) .iconPoder {
+    color: #E53935 !important;
+}
+
+
+/* Poder bloqueado (quando quantidade = 0) */
+.poder-bloqueado {
+    pointer-events: none;
+    opacity: 0.4;
+    filter: grayscale(100%);
+    scale: 0.95;
+}
+
+/* Ícones coloridos fixos */
+.iconPoder.iconeVida {
+    color: red !important;
+}
+
+.iconPoder.iconeEliminar {
+    color: red !important;
+}
+
+.iconPoder.iconeGelo {
+    color: #6bbcff !important;
 }

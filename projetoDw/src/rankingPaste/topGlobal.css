@@ -1,54 +1,117 @@
-.tg-container {
-  width: 100%;
-  text-align: center;
-  padding: 30px;
+/* =========================================
+   RESET GLOBAL
+============================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.tg-container h1 {
-  font-size: 40px;
-  color: #3a6f7a;
-  margin-bottom: 30px;
+body {
+    font-family: var(--fonte);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: background-color .25s ease, color .25s ease;
 }
 
-.tg-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+/* Melhor contraste para placeholder no modo escuro */
+::placeholder {
+    color: var(--cor-detalhes);
+    opacity: 0.85;
 }
 
-.tg-col {
-  background: #b6e0e5;
-  width: 260px;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px #00000020;
-  transition: 0.3s;
+/* Títulos padrão */
+h1, h2, h3 {
+    color: var(--cor-texto);
+    transition: color .25s ease;
 }
 
-.tg-col:hover {
-  transform: scale(1.03);
+/* Suaviza textos em todos os navegadores */
+body, input, button {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.tg-col h2 {
-  background: #79c5d0;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 22px;
-  color: #fff;
+
+/* =========================================
+   TOGGLE SWITCH (BOTÃO DE TEMA)
+============================================*/
+
+.toogle {
+    --switch_width: 56px;
+    --switch_height: 28px;
+
+    position: relative;
+    display: inline-block;
+    width: var(--switch_width);
+    height: var(--switch_height);
+    font-size: 17px;
 }
 
-.tg-col ul {
-  padding: 0;
-  margin-top: 15px;
+/* Esconde o checkbox */
+.toogle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-.tg-col li {
-  list-style: none;
-  background: #5bb6c5;
-  padding: 10px;
-  margin: 6px 0;
-  border-radius: 8px;
-  color: white;
-  font-size: 18px;
-  box-shadow: 0 3px 5px #00000025;
+/* Barra */
+.sliderBar {
+    position: absolute;
+    inset: 0;
+
+    background-color: var(--cor-fundo);
+    border: 2px solid var(--cor-escura);
+
+    cursor: pointer;
+    border-radius: var(--switch_height);
+    transition: background-color .15s, border-color .15s;
+}
+
+/* Bolinha */
+.sliderBar::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    bottom: -2px;
+
+    width: var(--switch_height);
+    height: var(--switch_height);
+
+    background-color: var(--cor-fundo);
+    border-radius: 50%;
+    border: 2px solid var(--cor-escura);
+    box-shadow: 0 0.2em 0 var(--cor-escura);
+
+    transform: translateY(-0.2em);
+    transition: transform .15s, box-shadow .15s, background-color .15s;
+    box-sizing: border-box;
+}
+
+/* Toggle ativado */
+input:checked + .sliderBar {
+    background-color: var(--cor-principal);
+    border-color: var(--cor-principal);
+}
+
+input:checked + .sliderBar::before {
+    transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.2em);
+    border-color: var(--cor-principal);
+}
+
+/* Hover */
+input:hover + .sliderBar::before {
+    transform: translateY(-0.3em);
+    box-shadow: 0 0.3em 0 var(--cor-escura);
+}
+
+input:hover:checked + .sliderBar::before {
+    transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
+    box-shadow: 0 0.3em 0 var(--cor-escura);
+}
+
+/* Foco acessível */
+input:focus-visible + .sliderBar {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--cor-principal);
 }

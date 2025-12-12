@@ -1,85 +1,110 @@
-*{
+/* ================================
+   RESET GLOBAL
+===================================*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: var(--fonte);
     background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: background-color .25s ease, color .25s ease;
 }
 
-::placeholder{
+/* Placeholder padronizado */
+::placeholder {
     color: var(--cor-detalhes);
 }
 
-h1{
+/* Títulos padrão */
+h1 {
     color: var(--cor-texto);
 }
+
+
+/* ================================
+   TOGGLE SWITCH (Tema)
+===================================*/
 
 .toogle {
     --switch_width: 56px;
     --switch_height: 28px;
-    font-size: 17px;
+
     position: relative;
     display: inline-block;
     width: var(--switch_width);
     height: var(--switch_height);
+    font-size: 17px;
 }
 
+/* Esconde o checkbox */
 .toogle input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
+/* Barra do toggle */
 .sliderBar {
-    box-sizing: border-box;
-    border: 2px solid var(--cor-escura);
     position: absolute;
-    cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+
     background-color: var(--cor-fundo);
-    transition: .15s;
+    border: 2px solid var(--cor-escura);
+
+    cursor: pointer;
     border-radius: var(--switch_height);
+    transition: .15s;
 }
 
+/* Bolinha que desliza */
 .sliderBar:before {
-    box-sizing: border-box;
-    position: absolute;
     content: "";
-    height: var(--switch_height);
-    width: var(--switch_height);
-    border: 2px solid var(--cor-escura);
-    border-radius: 100%;
+    position: absolute;
     left: -2px;
     bottom: -2px;
+
+    width: var(--switch_height);
+    height: var(--switch_height);
+
     background-color: var(--cor-fundo);
-    transform: translateY(-0.2em);
+    border-radius: 50%;
+    border: 2px solid var(--cor-escura);
     box-shadow: 0 0.2em 0 var(--cor-escura);
+
+    transform: translateY(-0.2em);
     transition: .15s;
+    box-sizing: border-box;
 }
 
+/* Quando ativado */
 input:checked + .sliderBar {
     background-color: var(--cor-principal);
 }
 
+/* Acessibilidade */
 input:focus-visible + .sliderBar {
     box-shadow: 0 0 0 2px var(--cor-principal);
 }
 
+/* Hover na bolinha */
 input:hover + .sliderBar:before {
     transform: translateY(-0.3em);
     box-shadow: 0 0.3em 0 var(--cor-escura);
 }
 
+/* Bolinha deslizando */
 input:checked + .sliderBar:before {
     transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.2em);
 }
 
+/* Hover com toggle ativado */
 input:hover:checked + .sliderBar:before {
     transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
     box-shadow: 0 0.3em 0 var(--cor-escura);

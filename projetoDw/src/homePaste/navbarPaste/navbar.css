@@ -10,37 +10,53 @@
     align-items: start;
     width: 280px;
     height: calc(100vh - var(--altura-cabecalho));
-    background-color: var(--cor-navbar);
+    background-color: var(--cor-navbar); /* agora depende do tema */
     padding: 2rem;
+
+    /* scrollbar adaptada ao dark mode */
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: var(--cor-principal) var(--cor-detalhes);
+    scrollbar-color: var(--cor-principal) var(--cor-escura);
+}
+
+/* Chrome / Edge scrollbar */
+.navbarContainer::-webkit-scrollbar {
+    width: 8px;
+}
+.navbarContainer::-webkit-scrollbar-track {
+    background: var(--cor-escura);
+}
+.navbarContainer::-webkit-scrollbar-thumb {
+    background: var(--cor-principal);
+    border-radius: 8px;
 }
 
 .navbarContent {
     width: 100%;
-    color: var(--cor-texto);
+    color: var(--cor-texto); /* garante contraste no modo escuro */
 }
 
 .navbarAberta {
     left: 0;
 }
 
-.lista{
+.lista {
     font-family: var(--fonte-2);
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-bottom: var(--cor-texto) solid 3px;
+
+    border-bottom: 3px solid var(--cor-texto); /* ajustado para tema */
     gap: 2rem;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
 
-.subtitulo{
+.subtitulo {
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    color: var(--cor-texto); /* garante leitura no escuro */
 }

@@ -1,4 +1,4 @@
-.bodyLogin{
+.bodyLogin {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,110 +7,99 @@
     gap: 20px;
 }
 
-.botaoLoginCadastro{
-  all: unset;
-  height: 50px;
-  width: 122px;
-  background-color: var(--cor-detalhes);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--cor-fundo);
-  cursor: pointer;
-  gap: 6px;
-}
-
-.inputLoginCadastro{
+/* BOTÕES */
+.botaoLoginCadastro,
+.buttonRocket {
     all: unset;
-    height: var(--input-altura);
-    width: var(--input-largura);
-    background-color: var(--cor-fundo);
-    box-shadow: var(--cor-detalhes) 8px 8px;
+    height: 50px;
+    width: 122px;
+
+    background-color: var(--cor-detalhes);
+    color: var(--cor-fundo);
+
     border-radius: 8px;
-    text-indent: 16px;
-}
-
-.cadastroContainer{
-    height: 600px;
-    width: 500px;
-    background-color: var(--cor-principal);
-    border-radius: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: start;
     align-items: center;
-    gap: 40px;
-    box-shadow: var(--cor-detalhes) 8px 8px;
-    padding: 44px;
-}
-
-.loginContainer{
-    height: 600px;
-    width: 500px;
-    background-color: var(--cor-principal);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 40px;
-    box-shadow: var(--cor-detalhes) 8px 8px;
-    padding: 44px;
-}
-
-.loginButtonContainer{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
+    
+    cursor: pointer;
+    gap: 6px;
+
+    transition: background-color .25s, color .25s, box-shadow .25s;
 }
 
-.loginInputContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.buttonRocket{
-  all: unset;
-  height: 50px;
-  width: 122px;
-  background-color: var(--cor-detalhes);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  color: var(--cor-fundo);
-  cursor: pointer;
-  gap: 6px;
-}
-
-.buttonRocket i{
-  color: var(--cor-fundo);
-  margin-left: 16px;
-
-}
-
+/* Ícone do foguete */
 .buttonRocket i {
-  margin-right: 3px;
-  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    color: var(--cor-fundo);
+    margin-right: 3px;
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .buttonRocket span {
-  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .buttonRocket:hover i {
-  transform: translateX(5px) rotate(45deg);
+    transform: translateX(5px) rotate(45deg);
 }
 
 .buttonRocket:hover span {
-  transform: translateX(7px);
+    transform: translateX(7px);
 }
 
-.cadastroContainer button{
-  width: 174px;
+/* INPUTS */
+.inputLoginCadastro {
+    all: unset;
+    height: var(--input-altura);
+    width: var(--input-largura);
+
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    border-radius: 8px;
+    text-indent: 16px;
+
+    box-shadow: 6px 6px 0 var(--cor-detalhes);
+    transition: background-color .25s, color .25s, box-shadow .25s;
+}
+
+.inputLoginCadastro::placeholder {
+    color: var(--cor-detalhes);
+}
+
+/* CONTAINERS */
+.cadastroContainer,
+.loginContainer {
+    height: 600px;
+    width: 500px;
+
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+
+    padding: 44px;
+    box-shadow: 8px 8px 0 var(--cor-detalhes);
+
+    transition: background-color .25s, color .25s, box-shadow .25s;
+}
+
+/* Ajuste do botão de cadastro */
+.cadastroContainer button {
+    width: 174px;
+}
+
+/* CONTAINERS DE INPUT/BOTÕES */
+.loginButtonContainer,
+.loginInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }

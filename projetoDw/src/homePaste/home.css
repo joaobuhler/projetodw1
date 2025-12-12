@@ -4,10 +4,12 @@
     height: 100vh;
     width: 100vw;
     overflow-y: hidden;
+    background-color: var(--cor-fundo); /* garante modo escuro aqui também */
 }
 
 .homeBaixoCabecalho{
     display: flex;
+    background-color: var(--cor-fundo); /* compatível com tema */
 }
 
 /* overlay que escurece a tela quando a navbar estiver aberta */
@@ -17,15 +19,22 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0); /* inicialmente transparente */
+  background: rgba(0, 0, 0, 0); 
   transition: background 0.22s ease, opacity 0.22s ease;
   opacity: 0;
   pointer-events: none;
-  z-index: 900; /* abaixo da navbar (navbar usa z-index:1000) */
+  z-index: 900;
 }
 
+/* modo escuro – agora pega automaticamente o dark/light */
 .overlay.active {
-  background: rgba(0, 0, 0, 0.726); /* nivel de escurecimento */
+  background: rgba(0, 0, 0, 0.65); 
   opacity: 1;
   pointer-events: auto;
 }
+
+/* Se quiser deixar o overlay claro no modo claro, é só ativar isso:
+.overlay.active.light {
+  background: rgba(255, 255, 255, 0.4);
+}
+*/
