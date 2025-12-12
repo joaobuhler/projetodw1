@@ -391,3 +391,27 @@
     align-items: center;
     cursor: pointer;
 }
+
+/* ======== INPUTS DO MODO CLARO ======== */
+input,
+textarea {
+  color: #0b2f33 !important;  /* texto visível */
+}
+
+/* ======== INPUTS NO MODO ESCURO ======== */
+.dark-mode input,
+.dark-mode textarea {
+  color: white !important; /* texto fica branco */
+  caret-color: white !important; /* cursor branco */
+}
+
+/* Ajuste para placeholder também */
+input::placeholder,
+textarea::placeholder {
+  color: #5e8b95 !important;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: #b8dfe8 !important;
+}
